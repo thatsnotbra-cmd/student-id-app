@@ -15,7 +15,7 @@
 <body>
 
     <div class="login-box">
-        <h2>オンライン学生証システム</h2>
+        <h2>オンライン学生証</h2>
         
         {% if error %}
             <p class="error">{{ error }}</p>
@@ -23,14 +23,17 @@
 
         <form method="POST">
             <div>
-                <input type="text" name="user_id" placeholder="ユーザーID (student01)" required>
+                <input type="text" name="user_id" placeholder="ユーザーID" required>
             </div>
             <div>
-                <input type="password" name="password" placeholder="パスワード (password123)" required>
+                <input type="password" name="password" placeholder="パスワード" required>
             </div>
             <button type="submit">ログイン</button>
         </form>
     </div>
-
+<br>
+<a href="{{ url_for('signup') }}">サインアップ</a>
+<br>
+<a href="{{ url_for('reset_password') }}">パスワードを忘れた方・変更はこちら</a>
 </body>
 </html>
